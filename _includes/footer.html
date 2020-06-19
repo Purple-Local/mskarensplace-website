@@ -1,0 +1,44 @@
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Contact</h2>
+                    <p>
+                        {% if site.email %}
+                        <a href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
+                        {% endif %}
+                        {% if site.phone %}
+                        <a href="tel:{{ site.phone }}"><i class="fas fa-phone"></i></a>
+                        {% endif %}
+                        {% if site.location %}
+                        <a href="{{ site.location }}"><i class="fas fa-map-marker"></i></a>
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Connect</h2>
+                    <p>
+                        {% if site.facebook_link %}
+                        <a href="{{ site.facebook_link }}"><i class="fab fa-facebook"></i></a>
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h2>About</h2>
+                    <ul>
+                        {% for item in site.data.nav.docs %}
+                        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% if jekyll.environment == 'production' %}
+{% include analytics.html %}
+{% endif %}
+</body>
+
+</html>

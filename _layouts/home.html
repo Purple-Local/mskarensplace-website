@@ -1,0 +1,78 @@
+---
+layout: home
+---
+{% include header.html %}
+{% include nav.html %}
+<main>
+    <div class="jumbotron jumbotron-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="jumbotron-inner">
+                        <h1 class="display-4">{{ site.description }}</h1>
+                        <p class="lead">{{ page.lead }}</p>
+                        {% if page.form %}
+                        <div class="request">
+                            <p><a class="btn btn-primary btn-lg" href="{{ page.form }}" role="button">{% if page.form_text %}{{ page.form_text }}{% else %}Request {{ page.service | downcase }}{% endif %}</a></p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container section">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Hours</h2>
+                <ul>
+                    <li>Wed: 10:00am - 5:00pm</li>
+                    <li>Thu: 10:00am - 5:00pm</li>
+                    <li>Fri: 10:00am - 5:00pm</li>
+                    <li>Sat: 10:00am - 5:00pm</li>
+                </ul>
+                <h2>Contact</h2>
+                <ul>
+                    <li>Phone: <a href="tel:9252832855">925.283.2855</a></li>
+                    <li>Email: <a href="mailto:karengaskins@sbcglobal.net">karengaskins@sbcglobal.net</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Directions</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.66183427305!2d-122.12314738467899!3d37.89159037973837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x33428884dd8584!2sMs%20Karen&#39;s%20Place!5e0!3m2!1sen!2sus!4v1592523373267!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="container section">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>News</h2>
+            </div>
+            <div class="col-md-12">
+                {% include news.html %}
+                <p><a href="/news/" class="btn btn-outline-secondary">News</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Press</h2>
+            </div>
+            <div class="col-md-6">
+                <h3>‘Ms. Karen’ aces kids’ haircuts, wins hearts</h3>
+                <blockquote>
+                    <p>If hairdressers are therapists with cutting shears, then Karen Gaskins is Freud for kids.</p>
+                    <p>Over the past decade, Gaskins — or Ms. Karen, as she is known and calls herself — has cut and styled thousands of Bay Area children. They come to Ms. Karen’s Place in Lafayette from as far as Napa and San Francisco, settle into the yellow car chair in her closet-sized salon, and feast on lollipops and Sesame Street reruns, bending her ear as she snips.</p>
+                    <p>“The kids talk to me about everything,” says Gaskins, 57, of Concord. “They just run in with it.”</p>
+                    <p><em>- The Mercury News</em></p>
+                </blockquote>
+                <p><a href="https://www.mercurynews.com/2013/08/08/lafayette-ms-karen-aces-kids-haircuts-wins-hearts/">Full story</a></p>
+            </div>
+            <div class="col-md-6">
+                <a href="https://www.mercurynews.com/2013/08/08/lafayette-ms-karen-aces-kids-haircuts-wins-hearts/"><img src="img/posts/ms-karen-mercury-news.png" alt="‘Ms. Karen’ aces kids’ haircuts, wins hearts"></a>
+            </div>
+        </div>
+    </div>
+</main>
+{% include footer.html %}

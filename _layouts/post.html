@@ -1,0 +1,74 @@
+---
+layout: post
+---
+{% include header.html %}
+{% include nav.html %}
+<main>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="jumbotron-inner">
+                        <h1>{{ page.title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container news">
+        <div class="row">
+            <div class="col-md-3">
+                {% if page.author %}
+                {% assign author = site.data.people[page.author] %}
+                <div class="people">
+                    <img src="{{ site.url }}/img/people/{{ author.image }}" alt="{{ author.name }}" title="{{ author.name }}">
+                    <p class="text-muted byline">{{ author.name }}</p>
+                </div>
+                <p class="people-social">
+                    {% if author.email %}
+                    <a href="mailto:{{ author.email }}"><i class="fas fa-envelope"></i></a>
+                    {% endif %}
+                    {% if author.phone %}
+                    <a href="mailto:{{ author.phone }}"><i class="fas fa-phone"></i></a>
+                    {% endif %}
+                    {% if author.facebook %}
+                    <a href="{{ author.facebook }}"><i class="fab fa-facebook"></i></a>
+                    {% endif %}
+                    {% if author.twitter %}
+                    <a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-twitter"></i></a>
+                    {% endif %}
+                </p>
+                {% endif %}
+                <div class="people">
+                    <p class="text-muted byline">
+                        {{ page.date | date: "%B %-d, %Y"}}</p>
+                </div>
+                <div class="post-categories">
+                    {% if post %}
+                    {% assign categories = post.categories %}
+                    {% else %}
+                    {% assign categories = page.categories %}
+                    {% endif %}
+                    <ul class="nav nav-pills">
+                        {% for category in categories %}
+                        <li class="nav-item">
+                            <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{ category | capitalize }}</a></li>
+                        {% unless forloop.last %}&nbsp;{% endunless %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                {{ content }}
+                <div class="post-bio">
+                    {% if author.bio %}
+                    <span class="text-muted byline">
+                        {{ author.bio | markdownify }}
+                    </span>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+{% include footer.html %}
