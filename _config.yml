@@ -27,7 +27,7 @@ facebook_link: https://www.facebook.com/Ms-Karens-Place-103902163035918/
 phone: 9252832855
 location: https://www.google.com/maps/place/Ms+Karen's+Place/@37.8915904,-122.1231474,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x33428884dd8584!8m2!3d37.8915904!4d-122.1209587
 rss: news/atom.xml
-baseurl: "https://purple-local.github.io/mskarensplace-website/"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
@@ -57,7 +57,7 @@ collections:
     output: true
   my_collection:
     output: true
-    permalink: /:path
+    permalink: /mskarensplace-website/:path
 
 defaults:
   - scope:
