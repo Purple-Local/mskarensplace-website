@@ -20,7 +20,7 @@
 
 name: Ms. Karen's Place
 description: The hair salon for children
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/mrskarensplace-website" # the subpath of your site, e.g. /blog
 url: https://mskarensplace.com # the base hostname & protocol for your site, e.g. http://example.com
 email: karengaskins@sbcglobal.net
 facebook_link: https://www.facebook.com/Ms-Karens-Place-103902163035918/
