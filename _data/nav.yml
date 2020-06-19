@@ -2,13 +2,13 @@ docs_list_title: nav
 docs:
 
 - title: Appointments
-  url: /mskarensplace-website/appointments
+  url: /appointments
 
 - title: About
-  url: /mskarensplace-website/about
+  url: /about
 
 - title: News
-  url: /mskarensplace-website/news
+  url: /news
 
 - title: Contact
-  url: /mskarensplace-website/contact
+  url: /contact

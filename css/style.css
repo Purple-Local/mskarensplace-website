@@ -360,7 +360,7 @@ ul.nav-pills {
 
 .jumbotron {
     background-color: #6f3b7e;
-    background-image: url('img/posts/home.jpg');
+    background-image: url('/img/posts/home.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 1px solid #f1f1f1;
@@ -390,7 +390,7 @@ ul.nav-pills {
 
 .jumbotron-home {
     background-color: #a14b9e;
-    background-image: url('img/posts/home.jpg');
+    background-image: url('/img/posts/home.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
